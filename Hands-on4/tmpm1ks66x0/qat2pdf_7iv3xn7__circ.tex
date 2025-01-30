@@ -1,0 +1,11 @@
+\documentclass[crop, border = {10pt, 10pt, 10pt, 10pt}]{standalone}
+\usepackage{qcircuit, graphics, color, amsmath}
+\newcommand{\classic}{\colorbox{black}{\textcolor{white}{$\mathcal{B}$}}}
+\begin{document}
+\scalebox{2}{
+\Qcircuit @C=1em @R=.7em {
+    &\lstick{q_{0}} & \gate{H} & \multigate{1}{myCNOT} & \qw \\
+    &\lstick{q_{1}} & \qw & \ghost{myCNOT} & \qw
+}
+}
+\end{document}
